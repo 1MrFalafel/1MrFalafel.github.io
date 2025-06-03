@@ -1,137 +1,139 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="موقع فريد، مبرمج مبتدئ يعرض مشاريعه ومهاراته في البرمجة باستخدام HTML.">
-    <meta name="keywords" content="فريد، برمجة، HTML، مشاريع، فلافل">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="موقع فريد، مبرمج مبتدئ يعرض مشاريعه ومهاراته في البرمجة باستخدام HTML." />
+    <meta name="keywords" content="فريد، برمجة، HTML، مشاريع، فلافل" />
     <title>Falafel</title>
-          <link rel="icon" href="Mr.Falafel.PNG" type="png">
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f3f3f3;
-        scroll-behavior: smooth;
-    }
+    <link rel="icon" href="Mr.Falafel.PNG" type="image/png" />
+    <!-- خط عربي من جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cairo', Arial, sans-serif;
+            background-color: #f3f3f3;
+            scroll-behavior: smooth;
+            color: #222;
+        }
 
-    .all {
-        background-color: black;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        animation: fadeIn 2s ease-in-out;
-    }
+        .all {
+            background-color: black;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+            color: white;
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
 
-    h1 {
-        text-align: center;
-        border: 2px solid #006400;
-        background-color: #228B22;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        animation: slideIn 1.5s ease-in-out;
-    }
+        h1, h2, h3 {
+            text-align: center;
+            background-color: #228B22;
+            color: white;
+            border-radius: 5px;
+            margin: 10px auto;
+            max-width: 80%;
+            padding: 10px;
+        }
 
-    h2 {
-        text-align: center;
-        border: 2px solid #006400;
-        background-color: #228B22;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        animation: fadeIn 2.5s ease-in-out;
-    }
+        h1 {
+            border: 2px solid #006400;
+            animation: slideIn 1.5s ease-in-out;
+        }
 
-    h3 {
-        text-align: center;
-        border: 2px double #006400;
-        background-color: #228B22;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        animation: fadeIn 2.5s ease-in-out;
-    }
+        h2 {
+            border: 2px solid #006400;
+            animation: fadeIn 2.5s ease-in-out;
+        }
 
-    .products {
-        text-align: center;
-        margin: 20px 0;
-    }
+        h3 {
+            border: 2px double #006400;
+            animation: fadeIn 2.5s ease-in-out;
+        }
 
-    .products a {
-        display: inline-block;
-        background-color: #0066cc;
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
-        margin: 10px;
-        padding: 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s, background-color 0.3s;
-        animation: fadeIn 3s ease-in-out;
-    }
+        .products {
+            text-align: center;
+            margin: 30px 0;
+        }
 
-    .products a:hover {
-        transform: scale(1.1);
-        background-color: #004080;
-    }
+        .products a {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+            animation: fadeIn 3s ease-in-out;
+        }
 
-    .social-buttons {
-        text-align: center;
-        margin: 20px 0;
-    }
+        .products a:hover {
+            transform: scale(1.1);
+            background-color: #004080;
+        }
 
-    .social-buttons a {
-        display: inline-block;
-        background-color: #0066cc;
-        color: white;
-        text-decoration: none;
-        font-size: 1em;
-        margin: 5px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s, background-color 0.3s;
-    }
+        .social-buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
 
-    .social-buttons a:hover {
-        transform: scale(1.1);
-        background-color: #004080;
-    }
+        .social-buttons a {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            margin: 5px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+        }
 
-    .header {
-        text-align: center;
-        background-color: #333;
-        color: white;
-        padding: 20px 0;
-    }
+        .social-buttons a:hover {
+            transform: scale(1.1);
+            background-color: #004080;
+        }
 
-    .header nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-size: 1.2em;
-    }
+        .header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
 
-    .header nav a:hover {
-        text-decoration: underline;
-    }
+        .header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
 
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
+        .header nav a:hover {
+            text-decoration: underline;
+        }
 
-    @keyframes slideIn {
-        from { transform: translateX(-100%); }
-        to { transform: translateX(0); }
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-    @keyframes zoomIn {
-        from { transform: scale(0.5); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
-</style>
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -144,12 +146,13 @@
     <div class="all">
         <h3>السلام عليكم و رحمة الله و بركاته.</h3>
         <h1>أنا فريد</h1>
-        <h1>مبتدئ في البرمجة</h1>
-        <h1>عمري 10 سنين</h1>
-        <h1>لدي 3 سنوات خبرة في البرمجة</h1>
-        <h1>برمجت 7 مواقع باستخدام HTML</h1>
+        <h2>مبتدئ في البرمجة</h2>
+        <h3>عمري 10 سنين</h3>
+        <h3>لدي 3 سنوات خبرة في البرمجة</h3>
+        <h3>برمجت 7 مواقع باستخدام HTML</h3>
+
         <div id="projects" class="products">
-            <h1>:مشاريعي هي</h1>
+            <h2>:مشاريعي هي</h2>
             <a href="https://fune.web.app" target="_blank" rel="noopener noreferrer">Fune Web</a>
             <a href="https://sites.google.com/view/Falafel-shortcuts" target="_blank" rel="noopener noreferrer">Falafel Shortcuts</a>
             <a href="https://falafel-site.github.io/Fune" target="_blank" rel="noopener noreferrer">Fune</a>
@@ -158,6 +161,7 @@
             <a href="https://falafel-site.github.io/Falafel-Games" target="_blank" rel="noopener noreferrer">Falafel Games</a>
             <a href="https://falafel-site.github.io/Falafel-Coin" target="_blank" rel="noopener noreferrer">Falafel Coin</a>
         </div>
+
         <div id="contact" class="social-buttons">
             <h2>:مواقع التواصل الاجتماعي الخاصة بي</h2>
             <a href="https://www.facebook.com/profile.php?id=61561213798072" target="_blank" rel="noopener noreferrer" aria-label="حساب فريد على فيسبوك">Facebook</a>
@@ -166,28 +170,33 @@
             <a href="https://www.x.com/1Mr_Falafel" target="_blank" rel="noopener noreferrer" aria-label="حساب فريد على إكس">X - Twitter</a>
             <a href="https://www.tiktok.com/@1mr_falafel" target="_blank" rel="noopener noreferrer" aria-label="حساب فريد على تيك توك">Tiktok</a>
         </div>
+
         <h3>شكراً لزيارتكم موقعنا.</h3>
     </div>
+
+    <!-- إعلانات جوجل -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8360775487911449"
      crossorigin="anonymous"></script>
-<!-- FalafelAd1 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-8360775487911449"
-     data-ad-slot="1965507106"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-8360775487911449"
+         data-ad-slot="1965507106"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
     <script>
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
-                window.scrollTo({
-                    top: targetElement.offsetTop - 50,
-                    behavior: 'smooth'
-                });
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
